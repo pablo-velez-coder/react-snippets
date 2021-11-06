@@ -1,0 +1,32 @@
+.pageContent{
+    display: flex;
+    &Left{
+        flex:0.8;
+        h1{
+         color:aliceblue;
+        }
+        &Data{
+            scroll-margin-top: 5rem;
+            >p,h2{
+             color:aliceblue;
+            }
+        }
+    }
+
+ &Right{
+     flex:0.2;
+     right:1rem;
+     position:sticky;
+     top:100px;
+     background-color:red;
+ }
+ }
+ .refItem{
+     padding: 0.7rem 1rem;
+     border-radius: 6px;
+     width: 100%;
+     &:hover{cursor: pointer;
+         background-color:#242526;
+
+     }
+ }

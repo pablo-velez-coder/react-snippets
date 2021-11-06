@@ -1,0 +1,14 @@
+.context{
+   &Left{
+       h1{
+        color:aliceblue;
+       }
+       &Data{
+           >p,h2{
+            color:aliceblue;
+           }
+       }
+   }
+display: flex;
+
+}

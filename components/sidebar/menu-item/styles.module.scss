@@ -1,0 +1,21 @@
+.menuItem{
+    background-color: transparent;
+    height:40px;
+    cursor: pointer;
+    margin-top: 0.35rem;
+    margin-bottom: 0.7rem;
+    padding:0.3rem 0.6rem;
+    display: flex;
+    align-items: center;
+    color:#DaDDE1;
+    &:hover{
+        background-color:#242526;
+        color:#DaDDE1;
+        border-radius: 5px;
+    }
+    &.active{
+        background-color: #242526;
+        border-radius: 5px;
+        color:rgb(155, 181, 228);
+    }
+}

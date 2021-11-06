@@ -1,0 +1,19 @@
+.collapse{
+    margin-bottom: 0.7rem;
+    &Title{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1rem;
+        padding:0.1rem 0.6rem;
+        background-color: transparent;
+        height:40px;
+        cursor: pointer;
+        color: #dadde1;
+    }
+    &Subs{
+        overflow:hidden;
+        transition: height 0.23s ease-in-out;
+    }
+
+}

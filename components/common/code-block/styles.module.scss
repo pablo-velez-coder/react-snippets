@@ -1,0 +1,26 @@
+.codeblock{
+    margin-top: 1.3rem;
+    margin-bottom: 1.5rem;
+    &Code{
+        position: relative;
+        >pre{
+            border-radius: 6px;
+            padding:1rem;
+            background-color:#282B36;
+            color: #fff;
+        }
+    }
+
+    &Copy{
+        position:absolute;
+        top:0.7rem;
+        right:1.2rem;
+        cursor: pointer;
+        height: 2rem;
+        width: 2rem;
+        display: grid;
+        place-items: center;
+        background-color:#3b3d46;
+        border-radius: 50%;
+    }
+}
