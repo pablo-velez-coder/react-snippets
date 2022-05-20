@@ -48,6 +48,11 @@ const Sidebar = () => {
     ]},
     {id:4, title: 'Redux', path:'redux'},
     {id:5, title: 'Context', path:'context'},
+    {id:6, title: 'GraphQL', path:'graphql'},
+    {id:7, title: 'MERN', path:'mern'},
+    {id:8, title: 'CSS miscellaneous', path:'css-miscellaneous', items:[
+      {id:1, title:'Customize scrollthumb',path:'scroll-thumb', isSubMenu:true}
+    ]},
   ]
 
   const {isMobileMenuOpen} = useContext(UiContext)

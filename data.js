@@ -202,5 +202,134 @@ export const UiContext = createContext()
             ]
         }
         ]
-    }
+    },
+    'forms':{
+      title:'Forms',
+      data:[
+        {id:1, title:'Most basic',
+      description:'Build the simple form and submit a text',code:`
+      import { useState } from 'react';
+
+      function App() {
+
+        const [text, setText] = useState('');
+      
+      const handleSubmit = e =>{
+          e.preventDefault();
+          //do something with the form data
+      }
+      
+      return (
+        <div className="App">
+          <form
+          onSubmit={handleSubmit}
+          >
+            <input 
+              value={text}
+              onChange={e=> setText(e.target.value)}
+            />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        )
+      }
+      `
+      },
+      {id:2, title:'Common basic implementation with different inputs',code:`import { useState } from 'react';
+
+function App() {
+
+  const [formData, setformData] = useState({
+    username: '',
+    email:'',
+    password:''
+  });
+
+  const {username, email, password} = formData
+
+  const handleChange = e =>{
+    setformData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = e =>{
+    e.preventDefault();
+    //do something with the form data
+  }
+
+  return (
+    <div className="App">
+      <form
+      onSubmit={handleSubmit}
+      >
+        <input 
+          name="username"
+          value={username}
+          onChange={handleChange}
+        />
+        <input 
+          name="email"
+          value={email}
+          onChange={handleChange}
+        />
+        <input 
+          name="password"
+          value={password}
+          onChange={handleChange}
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
+}
+
+export default App;
+      `}
+      ]
+    },
+    'scroll-thumb':{
+      title:'Customizing the Scroll thumb',
+      data:[
+        {id:1, title:'Most basic',code:`
+        // with Sass
+
+        .container{
+
+        &::-webkit-scrollbar{ <----- customizing the whole thumb element style
+          width:10px;   
+        }
+
+        &::-webkit-scrollbar-track {      <-----customizing the background
+          background-color: rgba(255, 166, 0, 0.623); 
+        }
+
+        &::-webkit-scrollbar-thumb {       <----- Customizing the actual thumb
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);  
+          background-color: rgb(255, 132, 0);
+          border-radius: 50px;
+        }
+      
+      }`}
+      ]
+    },
+    'input':{
+      title:'Input',
+      data:[
+        {id:1, title:'Most basic',code:`
+        const Input = ({...props}) => {
+    
+          return (
+              <input
+              {...props}
+              />
+          )
+      }
+      
+      export default Input
+        `}
+      ]
+    },
+    
 }
